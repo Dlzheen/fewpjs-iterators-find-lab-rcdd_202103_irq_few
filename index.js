@@ -1,15 +1,4 @@
-const testVar = {}
-
-function testFunc() {
-  return "hi"
-}
-const record = [
-  {year: "2018", result: "L"},
-  {year: "2017", result: "W"},
-  {year: "2016", result: "N/A"}
-  
-]
-function superbowlWin(record){
-  return
-  record.find( year => result === "w" )
+const superbowlWin = (aGames) => {
+ let gameResult =  aGames.find( value  => value.result === "W"  )
+ return !!gameResult ? gameResult.year : undefined
 }
